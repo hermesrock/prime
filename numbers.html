@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <title>Thierry Damiba Prime Number Generator</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function printPrime() {
+                var i = 0;
+                var j = 0;
+ 
+                limit = document.getElementById('limit').value;
+ 
+                //loop till i equals to $limit
+                for (i = 1; i <= limit; i++) {
+                    c = 0;
+ 
+                    for (j = 1; j <= i; j++) {
+                        // % modules will give the reminder value, so if the reminder is 0 then it is divisible
+                        if (i % j == 0) {
+                            //increment the value of c
+                            c++;
+                        }
+                    }
+ 
+                    //if the value of c is 2 then it is a prime number
+                    //because a prime number should be exactly divisible by 2 times only (itself and 1)
+                    if (c == 2) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', i + '<br>');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h2>This is Thierry Damiba's prime number generator!</h2>
+         Pick a number: <input type="number" name="limit" id="limit" min="0" style="width: 100px;" />&nbsp;<input type="submit" value="Winner Winner Chicken Dinner" onclick="printPrime()" name="print" />
+        <div id="result"></div>
+<h3>Under The Hood:</h3>
+<h4>  
+            function printPrime() {<br>
+                var i = 0;<br>
+                var j = 0;<br>
+ <br>
+                limit = document.getElementById('limit').value;<br>
+ <br>
+                //loop till i equals to $limit<br>
+                for (i = 1; i <= limit; i++) {<br>
+                    c = 0;<br>
+ 
+                    for (j = 1; j <= i; j++) {<br>
+                        // % modules will give the reminder value, so if the reminder is 0 then it is divisible<br>
+                        if (i % j == 0) {<br>
+                            //increment the value of c<br>
+                            c++;<br>
+                        }<br>
+                    }<br>
+ 
+                    //if the value of c is 2 then it is a prime number<br>
+                    //because a prime number should be exactly divisible by 2 times only (itself and 1)<br>
+                    if (c == 2) {<br>
+                        document.getElementById("result").insertAdjacentHTML('beforeend', i + '<br>');<br>
+                    }<br>
+                }<br>
+            }<br>
+       
+
+    </body>
+</html>
